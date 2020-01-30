@@ -22,3 +22,6 @@ WeatherStations/WeatherStations/.vs/WeatherStations/v16/Server/sqlite3/storage.i
 WeatherStations/WeatherStations/.vs/WeatherStations/v16/Server/sqlite3/storage.ide-shm
 WeatherStations/WeatherStations/.vs/WeatherStations/v16/Server/sqlite3/storage.ide
 WeatherStations/WeatherStations/.vs/WeatherStations/v16/.suo
+*.ide-shm
+*.ide-wal
+*.cache
