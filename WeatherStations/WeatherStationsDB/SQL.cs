@@ -38,5 +38,30 @@ namespace WeatherStationsDB
 
             return results;
         }
+
+        // modifies data in the weather stations database based on the sql query that is obtained. The number
+        // of row that were affected is returned, with -1 being an issue occured.
+        public int SetDataTable(string sql)
+        {
+            var rowsAffected = -1;
+
+            try
+            {
+                using (var connection =  DBConnection.GetConnection())
+                {
+                    var command = new MySqlCommand(sql, connection);
+                    command.Connection.Open();
+
+                    rowsAffected = command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                // TODO: display the exception
+                Debug.WriteLine(ex.Message);
+            }
+
+            return rowsAffected;
+        }
     }
 }

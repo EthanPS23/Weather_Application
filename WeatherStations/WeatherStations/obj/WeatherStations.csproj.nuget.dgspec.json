@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ethan\\Documents\\GitHub\\WeatherStations\\WeatherStations.csproj": {}
+    "C:\\Users\\Ethan\\Documents\\GitHub\\Weather_Application\\WeatherStations\\WeatherStations\\WeatherStations.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ethan\\Documents\\GitHub\\WeatherStations\\WeatherStations.csproj": {
+    "C:\\Users\\Ethan\\Documents\\GitHub\\Weather_Application\\WeatherStations\\WeatherStations\\WeatherStations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ethan\\Documents\\GitHub\\WeatherStations\\WeatherStations.csproj",
+        "projectUniqueName": "C:\\Users\\Ethan\\Documents\\GitHub\\Weather_Application\\WeatherStations\\WeatherStations\\WeatherStations.csproj",
         "projectName": "WeatherStations",
-        "projectPath": "C:\\Users\\Ethan\\Documents\\GitHub\\WeatherStations\\WeatherStations.csproj",
+        "projectPath": "C:\\Users\\Ethan\\Documents\\GitHub\\Weather_Application\\WeatherStations\\WeatherStations\\WeatherStations.csproj",
         "packagesPath": "C:\\Users\\Ethan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ethan\\Documents\\GitHub\\WeatherStations\\obj\\",
+        "outputPath": "C:\\Users\\Ethan\\Documents\\GitHub\\Weather_Application\\WeatherStations\\WeatherStations\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -40,6 +40,10 @@
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",
               "version": "[6.2.9, )"
+            },
+            "System.Data.DataSetExtensions": {
+              "target": "Package",
+              "version": "[4.5.0, )"
             }
           },
           "imports": [
