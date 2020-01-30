@@ -41,7 +41,8 @@ namespace WeatherStationsDB
             string sqlStatement = "";
             foreach (var StationInfo in regions)
             {
-                sqlStatement += String.Format(sql, StationInfo.RegionID, StationInfo.RegionName);
+                sqlStatement += String.Format(sql, StationInfo.StationID, StationInfo.RegionID, StationInfo.Elevation,
+                    StationInfo.Latitude, StationInfo.Longitude, StationInfo.Description);
             }
 
             result = SQL.SetDataTable(sqlStatement) >= 0; // if the number of rows affected is 0 or more than result is true
