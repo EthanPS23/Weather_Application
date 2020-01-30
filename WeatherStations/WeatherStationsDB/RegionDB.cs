@@ -31,7 +31,7 @@ namespace WeatherStationsDB
             string sql = "INSERT INTO Region " +
                             "(RegionID,RegionName) " +
                         "VALUES " +
-                            "({0},{1})" +
+                            "('{0}','{1}')" +
                         "ON DUPLICATE KEY UPDATE RegionName = '{1}';";
             string sqlStatement = "";
             foreach (var region in regions)

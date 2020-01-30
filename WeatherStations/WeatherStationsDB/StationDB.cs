@@ -32,7 +32,7 @@ namespace WeatherStationsDB
             string sql = "INSERT INTO Station " +
                             "(StationID,StationName) " +
                         "VALUES " +
-                            "({0},{1})" +
+                            "('{0}','{1}')" +
                         "ON DUPLICATE KEY UPDATE StationName = '{1}';";
             string sqlStatement = "";
             foreach (var station in stations)

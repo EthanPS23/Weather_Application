@@ -130,6 +130,7 @@
     <Compile Include="StationInfo.cs" />
     <Compile Include="StationInfoDB.cs" />
     <Compile Include="Weather.cs" />
+    <Compile Include="WeatherDB.cs" />
     <EmbeddedResource Include="Properties\WeatherStationsDB.rd.xml" />
   </ItemGroup>
   <ItemGroup>

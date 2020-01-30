@@ -10,7 +10,7 @@ namespace WeatherStationsDB
     public class StationInfoDB
     {
         // method to get a list of the regions
-        public static List<StationInfo> GetRegions()
+        public static List<StationInfo> GetStationInfo()
         {
             var dt = SQL.GetDataTable("select * from StationInfo"); // get all of the regions as a datatable
             List<StationInfo> regions = dt.AsEnumerable() //convert the datatable to a list of regions
@@ -28,21 +28,21 @@ namespace WeatherStationsDB
         }
 
         // method to set the regions in the database
-        public static bool SetRegions(List<StationInfo> regions)
+        public static bool SetStationInfo(List<StationInfo> stationsInfo)
         {
             var result = false;
             // sql to insert into the StationInfo table. If a duplicate key exists then the values will be updated
             string sql = "INSERT INTO StationInfo " +
                             "(StationID,RegionID,Elevation,Latitude,Longitude,Description) " +
                         "VALUES " +
-                            "({0},{1},{2},{3},{4},{5})" +
+                            "('{0}','{1}','{2}','{3}','{4}','{5}')" +
                         "ON DUPLICATE KEY UPDATE RegionID='{1}',Elevation='{2}',Latitude='{3}',Longitude='{4}'," +
                             "Description='{5}';";
             string sqlStatement = "";
-            foreach (var StationInfo in regions)
+            foreach (var stationInfo in stationsInfo)
             {
-                sqlStatement += String.Format(sql, StationInfo.StationID, StationInfo.RegionID, StationInfo.Elevation,
-                    StationInfo.Latitude, StationInfo.Longitude, StationInfo.Description);
+                sqlStatement += String.Format(sql, stationInfo.StationID, stationInfo.RegionID, stationInfo.Elevation,
+                    stationInfo.Latitude, stationInfo.Longitude, stationInfo.Description);
             }
 
             result = SQL.SetDataTable(sqlStatement) >= 0; // if the number of rows affected is 0 or more than result is true

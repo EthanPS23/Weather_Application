@@ -25,3 +25,7 @@ WeatherStations/WeatherStations/.vs/WeatherStations/v16/.suo
 *.ide-shm
 *.ide-wal
 *.cache
+*.ide-shm
+*.ide-wal
+*.ide
+*.cache
