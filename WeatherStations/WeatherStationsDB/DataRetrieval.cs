@@ -61,9 +61,9 @@ namespace WeatherStationsDB
             return html;
         }
 
-        //private void HTMLExamination(string html)
-        //{
+        private void HTMLExamination(string html)
+        {
 
-        //}
+        }
     }
 }
