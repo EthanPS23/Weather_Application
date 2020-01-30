@@ -1,0 +1,2 @@
+C:\Users\Ethan\Documents\GitHub\Weather_Application\WeatherStations\WeatherStations\WeatherStations.csproj;x86
+C:\Users\Ethan\Documents\GitHub\Weather_Application\WeatherStations\WeatherStationsDB\WeatherStationsDB.csproj;neutral

@@ -8,27 +8,27 @@ using System.Threading.Tasks;
 
 namespace WeatherStationsDB
 {
-    public class DataRetrieval
+    public static class DataRetrieval
     {
-        private string ParksCanadaWeatherStationURL = @"https://avalanche.pc.gc.ca/station-eng.aspx?d=";
+        private static string ParksCanadaWeatherStationURL = @"https://avalanche.pc.gc.ca/station-eng.aspx?d=";
 
         // create the links required for getting the date. Returns th list of links
-        private List<string> GenerateLink()
+        public static List<string> GenerateLink()
         {
             var links = new List<string>();
 
             // creating the links for the available data. Data Started becoming readily available in 2016.
             // Starting in 2016 and adding days until the todays current date is reached
-            for (DateTime date = new DateTime(2016,1,1); date.Date.ToShortDateString() == DateTime.Today.ToShortDateString(); date.AddDays(1))
+            for (DateTime date = new DateTime(2016,1,1); date.Date.ToShortDateString() != DateTime.Today.ToShortDateString(); date = date.AddDays(1))
             {
-                links.Add(ParksCanadaWeatherStationURL + date.ToString("YYYY-MM-dd"));
+                links.Add(ParksCanadaWeatherStationURL + date.ToString("yyyy-MM-dd"));
             }
 
             return links;
         }
 
         // obtains the html of the urls
-        private string ObtainHtml(string urlAddress)
+        public static string ObtainHtml(string urlAddress)
         {
             // TODO: determine if try/catch is needed in here
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlAddress);
@@ -60,5 +60,10 @@ namespace WeatherStationsDB
 
             return html;
         }
+
+        //private void HTMLExamination(string html)
+        //{
+
+        //}
     }
 }

@@ -157,6 +157,12 @@
       <Version>4.5.0</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WeatherStationsDB\WeatherStationsDB.csproj">
+      <Project>{ea0408cd-4d63-401c-8ca5-1110deaa0a53}</Project>
+      <Name>WeatherStationsDB</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
