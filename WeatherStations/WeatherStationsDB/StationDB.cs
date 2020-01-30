@@ -13,7 +13,7 @@ namespace WeatherStationsDB
         // method to get a list of the stations
         public static List<Station> GetStations()
         {
-            var dt = SQL.GetDataTable("select * from station"); // get all of the stations as a datatable
+            var dt = SQL.GetDataTable("select * from Station"); // get all of the stations as a datatable
             List<Station> stations = dt.AsEnumerable() //convert the datatable to a list of stations
                 .Select(row => new Station
                 (
@@ -28,17 +28,20 @@ namespace WeatherStationsDB
         public static bool SetStations(List<Station> stations)
         {
             var result = false;
-            // the sql to insert into the station table. If a duplicate key exists then the values will be updated
+            // sql to insert into the station table. If a duplicate key exists then the values will be updated
             string sql = "INSERT INTO Station " +
-                            "(StationID,Name) " +
+                            "(StationID,StationName) " +
                         "VALUES " +
                             "({0},{1})" +
-                        "ON DUPLICATE KEY UPDATE Name = {1};";
+                        "ON DUPLICATE KEY UPDATE StationName = '{1}';";
             string sqlStatement = "";
             foreach (var station in stations)
             {
-                sqlStatement += String.Format(sql, station.StationID, station.Name);
+                sqlStatement += String.Format(sql, station.StationID, station.StationName);
             }
+
+            result = SQL.SetDataTable(sqlStatement) >= 0; // if the number of rows affected is 0 or more than result is true
+
             return result;
         }
     }

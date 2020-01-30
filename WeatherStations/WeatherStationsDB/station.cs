@@ -9,12 +9,12 @@ namespace WeatherStationsDB
     public class Station
     {
 		public int StationID { get; set; }
-		public string Name { get; set; }
+		public string StationName { get; set; }
 
 		public Station(int stationID, string name)
 		{
 			StationID = stationID;
-			Name = name;
+			StationName = name;
 		}
 	}
 }

@@ -10,3 +10,6 @@ WeatherStations/WeatherStationsDB/obj/WeatherStationsDB.csproj.nuget.cache
 WeatherStations/WeatherStationsDB/obj/WeatherStationsDB.csproj.nuget.dgspec.json
 WeatherStations/WeatherStationsDB/obj/x86/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 WeatherStations/WeatherStationsDB/obj/x86/Debug/WeatherStationsDB.csprojAssemblyReference.cache
+WeatherStations/WeatherStations/.vs/WeatherStations/v16/Server/sqlite3/storage.ide
+WeatherStations/WeatherStations/.vs/WeatherStations/v16/.suo
+WeatherStations/WeatherStations/.vs/WeatherStations/v16/Server/sqlite3/storage.ide-wal

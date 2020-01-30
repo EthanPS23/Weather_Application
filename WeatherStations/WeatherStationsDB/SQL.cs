@@ -41,7 +41,7 @@ namespace WeatherStationsDB
 
         // modifies data in the weather stations database based on the sql query that is obtained. The number
         // of row that were affected is returned, with -1 being an issue occured.
-        public int SetDataTable(string sql)
+        public static int SetDataTable(string sql)
         {
             var rowsAffected = -1;
 
